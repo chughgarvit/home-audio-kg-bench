@@ -34,13 +34,6 @@ in 15 days you produce **four deliverables**:
 data, ask "Has the washing machine finished?", get a correct evidence-backed answer — and
 reproduce the results table with one command.
 
-**Why it matters:** deliverables 2–4 become the *evaluation section of the paper* we are
-writing. You are not doing support work; you are building the part that makes the claims
-credible.
-
-**Working rules:** commit daily to this repo · 5-line update to Garvit every night ·
-ask questions early, don't stay stuck >2 hours.
-
 ---
 
 ## The data contract (frozen — everything reads this)
@@ -219,5 +212,5 @@ recording of the demo. A handover note listing every known bug and shortcut.
 
 Cut in this order (last = cut first): stretch baselines (14b) → UI polish (9) →
 Baseline A on full benchmark (subsample it instead). **Never cut:** the query API (6),
-the benchmark file (10), the harness (11), Baseline B (13) — those four are the paper's
-evaluation section.
+the benchmark file (10), the harness (11), Baseline B (13) — those four are the core
+deliverables.
