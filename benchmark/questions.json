@@ -1,0 +1,18 @@
+{
+  "target_questions": [
+    {"q": "What was I doing before the call?",      "type": "reconstruction"},
+    {"q": "Did I turn that off?",                   "type": "state"},
+    {"q": "Has the washing machine finished?",      "type": "state"},
+    {"q": "What made that sound?",                  "type": "attribution"},
+    {"q": "Was someone at the door?",               "type": "detection"},
+    {"q": "Where did I last use my keys?",          "type": "unanswerable_audio_only"},
+    {"q": "Have I already added water?",            "type": "detection"},
+    {"q": "Is someone still in the kitchen?",       "type": "state"},
+    {"q": "Did I complete the task?",               "type": "incompleteness"},
+    {"q": "What happened while I was away?",        "type": "reconstruction"}
+  ],
+  "benchmark_types": [
+    "detection", "counting", "temporal", "state",
+    "attribution", "reconstruction", "incompleteness", "unanswerable"
+  ]
+}
