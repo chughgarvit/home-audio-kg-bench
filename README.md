@@ -81,7 +81,22 @@ zero code changes on your side. That's the whole point of the contract.
 
 ---
 
+## Repo map
+
+| File | What it is |
+|---|---|
+| `README.md` | goal, contract, tasks (this file) |
+| `METHODS.md` | **how** each task is done — pseudocode per task, read before starting one |
+| `graph/SCHEMA.md` | the graph definition (nodes/edges/rules) with a worked example |
+| `data/README.md` | where the datasets are and how real data arrives |
+| `scripts/make_mock_captions.py` | generates the mock day |
+| `scripts/timeline_to_captions.py` | converts the real pipeline CSV → caption records |
+| `benchmark/questions.json` | the 10 questions + benchmark question types |
+
 ## Tasks — numbered, with details
+
+Concrete methods for each task are in **`METHODS.md`** (M1–M7) — the task list says
+*what*, METHODS says *how*.
 
 ### Part A — Knowledge graph (`graph/`)
 
@@ -95,11 +110,11 @@ before writing any code.
 t_end`, records in order, confidence in [0,1]), fails loudly with the record index on
 any violation. Prints a one-line summary (n records, time span, n activities).
 
-**3. Graph schema (`graph/SCHEMA.md`).**
-One page. Node types: `Appliance/Object`, `Activity`, `SoundEvent`, `State`, `Room`
-(room is optional — mock data has none). Edge types: `has_state`, `part_of`,
-`before`, `evidenced_by`. Every node/edge carries `t` (or an interval) and `confidence`.
-**Get Garvit's sign-off on this file before writing graph code.**
+**3. Graph schema — read `graph/SCHEMA.md` (provided).**
+The schema is already defined: 4 node types, 3 edge types, append-only, provenance
+mandatory. Walk through its worked example by hand against ~10 mock records until the
+mapping record→graph is obvious to you. If something in the data doesn't fit the schema,
+propose a change — **schema changes need Garvit's sign-off**, code changes don't.
 
 **4. Graph builder (`graph/build.py`).**
 `build_graph(records) -> nx.MultiDiGraph`. One `SoundEvent` node per record, linked to
