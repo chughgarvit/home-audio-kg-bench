@@ -13,6 +13,31 @@ uncertainty-aware answers  →  benchmarked against published baselines
 Everything here runs on a **laptop (CPU)**. No GPU, no model training — the trained audio
 model is a separate track (Sarita); you consume its outputs through the data contract below.
 
+---
+
+## Your goal (read this first)
+
+Build the **reasoning-and-evaluation half** of the system and prove it works. Concretely,
+in 15 days you produce **four deliverables**:
+
+1. **A working pipeline**: timestamped audio captions in → temporal knowledge graph →
+   answers to the 10 target questions, each answer grounded in evidence and honest about
+   uncertainty. Runnable by anyone in ≤10 commands. *(Tasks 1–9)*
+2. **The benchmark**: a file of 300–500 question–answer pairs over home-audio timelines —
+   the first benchmark for this task. *(Task 10)*
+3. **The comparison**: 3 published baseline systems run on that same benchmark through one
+   shared harness, so the numbers are directly comparable. *(Tasks 11–14)*
+4. **The results table + demo**: one table (our system vs. baselines, per question type),
+   a 5-minute screen recording, and a short report. *(Task 15)*
+
+**Definition of done:** a stranger can clone this repo, run the pipeline on the sample
+data, ask "Has the washing machine finished?", get a correct evidence-backed answer — and
+reproduce the results table with one command.
+
+**Why it matters:** deliverables 2–4 become the *evaluation section of the paper* we are
+writing. You are not doing support work; you are building the part that makes the claims
+credible.
+
 **Working rules:** commit daily to this repo · 5-line update to Garvit every night ·
 ask questions early, don't stay stuck >2 hours.
 
